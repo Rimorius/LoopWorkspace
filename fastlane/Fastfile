@@ -40,7 +40,7 @@ platform :ios do
     )
 
     previous_build_number = latest_testflight_build_number(
-      app_identifier: "com.#{TEAMID}.loopkit.Loop",
+      app_identifier: "com.#{TEAMID}.loopkit.Loop24",
       api_key: api_key,
     )
 
@@ -65,7 +65,7 @@ platform :ios do
     )
 
     previous_build_number = latest_testflight_build_number(
-      app_identifier: "com.#{TEAMID}.loopkit.Loop",
+      app_identifier: "com.#{TEAMID}.loopkit.Loop24",
       api_key: api_key,
     )
 
@@ -82,7 +82,7 @@ platform :ios do
 
     update_code_signing_settings(
       path: "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj",
-      profile_name: mapping["com.#{TEAMID}.loopkit.Loop"],
+      profile_name: mapping["com.#{TEAMID}.loopkit.Loop24"],
       code_sign_identity: "iPhone Distribution",
       targets: ["Loop"]
     )
@@ -223,7 +223,7 @@ platform :ios do
       force: true,
       git_basic_authorization: Base64.strict_encode64("#{GITHUB_REPOSITORY_OWNER}:#{GH_PAT}"),
       app_identifier: [
-        "com.#{TEAMID}.loopkit.Loop", 
+        "com.#{TEAMID}.loopkit.Loop24", 
         "com.#{TEAMID}.loopkit.Loop.statuswidget", 
         "com.#{TEAMID}.loopkit.Loop.LoopWatch.watchkitextension", 
         "com.#{TEAMID}.loopkit.Loop.LoopWatch", 
@@ -248,7 +248,7 @@ platform :ios do
       bundle_id = Spaceship::ConnectAPI::BundleId.find(identifier)
     end
 
-    find_bundle_id("com.#{TEAMID}.loopkit.Loop")
+    find_bundle_id("com.#{TEAMID}.loopkit.Loop24")
 
     match(
       type: "appstore",
